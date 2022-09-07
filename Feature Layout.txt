@@ -1,0 +1,18 @@
+ChristCom/C2
+
+Perspective Features
+-Simple Documents from the Admin
+	Syllabus
+	Courses
+	Subjects
+	Fees
+
+-Accounts
+-Student Uploads
+-Student Downloads
+-Stuent Request
+-Student Comments
+-Student Reward Points
+	Earning
+	Spending
+-Hostel Roommate
