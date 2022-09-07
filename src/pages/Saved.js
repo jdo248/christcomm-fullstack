@@ -8,8 +8,8 @@ const Saved = () => {
   const getSaved = async () => {
     const response = await fetch(`/api/bookmark/${uid}?page=${page}`);
     const data = await response.json();
-    setSaved(data);
-    setHasMore(data.length > 0);
+    setSaved(data.results);
+    setHasMore(data.next !== null);
   };
   useEffect(() => {
     const userid = window.localStorage.getItem("user");
@@ -24,7 +24,7 @@ const Saved = () => {
   return (
     <div>
       <h1>Saved</h1>
-      <div className="container">
+      <div className="container mt-3 w-50 m-auto">
         {saved.map((entry) => (
           <div className="card" key={entry?.id}>
             <div className="card-header">

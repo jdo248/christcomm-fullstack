@@ -4,11 +4,13 @@ import CButton from "../components/CButton";
 import LoginHeader from "../components/login/LoginHeader";
 import Footer from "../components/layout/Footer";
 import { Link } from "react-router-dom";
+import { async } from "q";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [username, setUsername] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [token, setToken] = useState("");
@@ -39,8 +41,7 @@ const Signup = () => {
     }
   }, [error]);
 
-  const onSignupBtnClick = (e) => {
-    e.preventDefault();
+  const onSignupBtnClick = async () => {
     setLoading(true);
     setError("");
     if (password !== confirmPassword) {
@@ -50,38 +51,37 @@ const Signup = () => {
     }
     const data = {
       email: email,
+      username: username,
       password: password,
+      password2: confirmPassword,
     };
-    fetch("/api/register/", {
+    const response = await fetch("/api/register/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        if (!res.error) {
-          setError("Error signing up: ", res.error);
-          setLoading(false);
-        } else {
-          setToken(res.token);
-          createSession(res.token);
-          setLoading(false);
-        }
-      })
-      .catch((err) => {
-        setError("Error signing up: ", err);
-        setLoading(false);
-      });
+    });
+    const res = await response.json();
+
+    if (response.status === 201) {
+      setLoading(false);
+      window.location.href = "/login";
+    } else {
+      setError("Error signing up: ", res);
+      setLoading(false);
+    }
+    // .catch((err) => {
+    //   setError("Error signing up: ", err);
+    //   setLoading(false);
+    // });
   };
 
   const onSignUpDup = (e) => {
     e.preventDefault();
     setLoading(true);
     setError("");
-    createSession("jn3jop2n3");
-    setLoading(false);
+    onSignupBtnClick();
   };
 
   return (
@@ -92,6 +92,15 @@ const Signup = () => {
           className="row align-items-center m-auto"
           style={{ maxWidth: 550 }}
         >
+          <Form.Group controlId="formBasicUName">
+            <Form.Label className="fw-bold mt-2"> Userwname </Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter username"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </Form.Group>
+
           <Form.Group controlId="formBasicEmail">
             <Form.Label className="fw-bold mt-2">Email address</Form.Label>
             <Form.Control

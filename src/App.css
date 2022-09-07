@@ -27,9 +27,7 @@
 .App-link {
   color: #074256;
 }
-.link-info{
-  color: #074256 !important;
-}
+
 
 .slin {
 	-webkit-animation: slin 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

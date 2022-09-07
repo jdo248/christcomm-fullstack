@@ -3,6 +3,7 @@ import Browse from "../pages/Browse";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Profile from "../pages/Profile";
+import UProfile from "../pages/UProfile";
 import HomeLayout from "../components/layout/HomeLayout";
 import Signup from "../pages/Signup";
 import { logout } from "./logout";
@@ -67,6 +68,10 @@ const links = (isAuthenticated, isAdmin) => [
       {
         path: "newentry",
         element: <NewEntry />,
+      },
+      {
+        path: "uprofile/:id",
+        element: <UProfile />,
       },
       {
         path: "*",
