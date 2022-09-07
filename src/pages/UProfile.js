@@ -7,10 +7,10 @@ const Profile = () => {
     const response = await fetch(`/api/profile/${parseInt(userid)}`);
     const data = await response.json();
     setUser(data);
+    document.title = `${data?.name}'s Profile` || "User Profile";
   };
   useEffect(() => {
     getUserProfile();
-    document.title = `${user?.name}'s Profile` || "User Profile";
   }, []);
 
   return (

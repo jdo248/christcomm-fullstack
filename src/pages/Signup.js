@@ -44,11 +44,32 @@ const Signup = () => {
   const onSignupBtnClick = async () => {
     setLoading(true);
     setError("");
+
+    if (
+      username === "" ||
+      email === "" ||
+      password === "" ||
+      confirmPassword === ""
+    ) {
+      setError("Please enter all the details.");
+      setLoading(false);
+    }
+
     if (password !== confirmPassword) {
       setError("Passwords do not match");
       setLoading(false);
       return;
     }
+    if (!email.includes("@") || !email.includes(".")) {
+      setError("Invalid email");
+      setLoading(false);
+    }
+
+    if (password.length < 8) {
+      setError("Password must be at least 8 characters long");
+      setLoading(false);
+    }
+
     const data = {
       email: email,
       username: username,
@@ -68,7 +89,11 @@ const Signup = () => {
       setLoading(false);
       window.location.href = "/login";
     } else {
-      setError("Error signing up: ", res);
+      setError("Error signing up", res.error);
+      Object.keys(res).forEach((key) => {
+        setError(res[key]);
+      });
+
       setLoading(false);
     }
     // .catch((err) => {

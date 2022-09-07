@@ -95,7 +95,13 @@ const Entry = () => {
             <div className="card-body">
               <p className="card-text">{entry?.content}</p>
               <p className="card-text">
-                by <i className="text-primary">{entry?.creator}</i>
+                by{" "}
+                <a
+                  href={`/uprofile/${entry?.creator_id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <i className="text-primary">{entry?.creator}</i>
+                </a>
               </p>
               <p className="card-text text-muted">
                 {dateInWords(
@@ -127,7 +133,13 @@ const Entry = () => {
                           maxWidth: "max-content",
                         }}
                       >
-                        {comment?.creator}
+                        <a
+                          href={`/uprofile/${comment?.creator_id}`}
+                          style={{ textDecoration: "none" }}
+                        >
+                          {" "}
+                          {comment?.creator}
+                        </a>
                       </h4>
                     </div>
                     <div

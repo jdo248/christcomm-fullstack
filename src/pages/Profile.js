@@ -21,7 +21,7 @@ const Profile = () => {
         <div className="mx-auto mt-4">
           <img
             src={user?.avatar}
-            className="box-shadow"
+            className="shadow-lg border border-1"
             alt="profile"
             style={{ borderRadius: 50 }}
           />

@@ -13,72 +13,69 @@ const Courses = () => {
     BCOM: [
       {
         subject: "Subject 1",
-        syllabuslink: "https://www.google.com",
       },
       {
         subject: "Subject 2",
-        syllabuslink: "https://www.google.com",
       },
       {
         subject: "Subject 3",
-        syllabuslink: "https://www.google.com",
       },
     ],
     BBA: [
       {
         subject: "Subject 1b",
-        syllabuslink: "https://www.google.com",
       },
       {
         subject: "Subject 2b",
-        syllabuslink: "https://www.google.com",
       },
       {
         subject: "Subject 3b",
-        syllabuslink: "https://www.google.com",
       },
     ],
     BCA: [
       {
         subject: "Subject 1c",
-        syllabuslink: "https://www.google.com",
       },
       {
         subject: "Subject 2c",
-        syllabuslink: "https://www.google.com",
       },
     ],
     "BA JPE": [
       {
-        subject: "Subject 1j",
-        syllabuslink: "https://www.google.com",
+        subject: "NEWS WRITING AND REPORTING",
+      },
+      {
+        subject: "INTRODUCTION TO COMMUNICATION AND MEDIA",
+      },
+      {
+        subject: "PRINT MEDIA",
+      },
+      {
+        subject: "AUDIO VISUAL MEDIA",
       },
     ],
     "BSC PM": [
       {
         subject: "Sub 1",
-        syllabuslink: "sass",
       },
     ],
     "BSC CM": [
       {
         subject: "Sub 1",
-        syllabuslink: "google",
       },
     ],
     "BSC CSM": [
       {
         subject: "Sub 2h",
-        syllabuslink: "",
       },
     ],
     "BSC PSY CS": [
       {
         subject: "Sub 5h",
-        syllabuslink: "",
       },
     ],
   };
+
   return (
     <div>
       <h1>Courses</h1>
