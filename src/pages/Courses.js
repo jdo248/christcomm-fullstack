@@ -18,10 +18,10 @@ const Courses = () => {
         subject: "Digital Fluency",
       },
       {
-        subject: "Financial Accountinng",
+        subject: "Financial Accounting",
       },
       {
-        subject: "FInancial Literacy",
+        subject: "Financial Literacy",
       },
       {
         subject: "Principles of Marketing",
@@ -64,7 +64,7 @@ const Courses = () => {
         subject: "Discrete Structures",
       },
       {
-        subject: "Object Oriented Programming using Java",
+        subject: "OOP Using Java",
       },
       {
         subject: "Problem Solving Techniques",
@@ -72,16 +72,16 @@ const Courses = () => {
     ],
     "BA JPE": [
       {
-        subject: "NEWS WRITING AND REPORTING",
+        subject: "News Writing and Reporting",
       },
       {
-        subject: "INTRODUCTION TO COMMUNICATION AND MEDIA",
+        subject: "Introduction to Communication and Media",
       },
       {
-        subject: "PRINT MEDIA",
+        subject: "Print Media",
       },
       {
-        subject: "AUDIO VISUAL MEDIA",
+        subject: "Audio Visual Media",
       },
       {
         subject: "Media Laws",
