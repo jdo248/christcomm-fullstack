@@ -12,32 +12,62 @@ const Courses = () => {
   const subArr = {
     BCOM: [
       {
-        subject: "Subject 1",
+        subject: "Business Management and Startups",
       },
       {
-        subject: "Subject 2",
+        subject: "Digital Fluency",
       },
       {
-        subject: "Subject 3",
+        subject: "Financial Accountinng",
+      },
+      {
+        subject: "FInancial Literacy",
+      },
+      {
+        subject: "Principles of Marketing",
+      },
+      {
+        subject: "Spreadsheet for Business",
       },
     ],
     BBA: [
       {
-        subject: "Subject 1b",
+        subject: "Business Environment",
       },
       {
-        subject: "Subject 2b",
+        subject: "Financial Accounting and Reporting",
       },
       {
-        subject: "Subject 3b",
+        subject: "Fundamentals of Accountancy",
+      },
+      {
+        subject: "Human Resource Management",
+      },
+      {
+        subject: "Management and Innovation",
+      },
+      {
+        subject: "Marketing Management",
       },
     ],
     BCA: [
       {
-        subject: "Subject 1c",
+        subject: "Computer Architecture",
       },
       {
-        subject: "Subject 2c",
+        subject: "Data Structures",
+      },
+      {
+        subject: "Database Managemet Systems",
+      },
+      {
+        subject: "Discrete Structures",
+      },
+      {
+        subject: "Object Oriented Programming using Java",
+      },
+      {
+        subject: "Problem Solving Techniques",
       },
     ],
     "BA JPE": [
@@ -53,25 +83,34 @@ const Courses = () => {
       {
         subject: "AUDIO VISUAL MEDIA",
       },
+      {
+        subject: "Media Laws",
+      },
+      {
+        subject: "Reporting",
+      }
     ],
     "BSC PM": [
       {
-        subject: "Sub 1",
+        subject: "Physics",
+      },
+      {
+        subject: "Mathematics",
       },
     ],
     "BSC CM": [
       {
-        subject: "Sub 1",
+        subject: "Chemistry",
       },
     ],
     "BSC CSM": [
       {
-        subject: "Sub 2h",
+        subject: "Computer Science",
       },
     ],
     "BSC PSY CS": [
       {
-        subject: "Sub 5h",
+        subject: "Psychology",
       },
     ],
   };
