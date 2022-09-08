@@ -58,7 +58,7 @@ const Courses = () => {
         subject: "Data Structures",
       },
       {
-        subject: "Database Managemet Systems",
+        subject: "Database Management System",
       },
       {
         subject: "Discrete Structures",

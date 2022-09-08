@@ -11,6 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
   const [token, setToken] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -26,6 +27,10 @@ const Login = () => {
   };
   const ifLoggedIn = () => {
     if (isLoggedIn) {
+      setTimeout(() => {
+   setSuccess("Login successful!")     
+      }, 1500);
+      alert("Successfully logged in")
       window.location.href = "/";
     }
     return;
@@ -62,7 +67,10 @@ const Login = () => {
       localStorage.setItem("token", JSON.stringify(res));
       localStorage.setItem("user", JSON.stringify(jwt_decode(res.access)));
       setLoading(false);
-      window.location.href = "/";
+        setSuccess("Login successful!")     
+      setTimeout(() => {
+        window.location.href = "/";
+           }, 400);
     } else {
       alert("Something went wrong!");
     }
@@ -179,6 +187,16 @@ const Login = () => {
             style={{ maxWidth: 400 }}
           >
             {error.toString()}
+          </p>{" "}
+        </div>
+      ) : null}
+       {success !== "" ? (
+        <div className="max-w-100 mb-4">
+          <p
+            className="p-2 rounded m-auto alert alert-success border-0 opacity-80"
+            style={{ maxWidth: 400 }}
+          >
+            {success.toString()}
           </p>{" "}
         </div>
       ) : null}

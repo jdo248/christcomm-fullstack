@@ -23,28 +23,28 @@ const Header = () => {
 }
             <Link
               to="/"
-              className="nav-opt-item-link mx-3 text-decoration-none fs-4 fw-bold link-info"
+              className="nav-opt-item-link mx-3 text-decoration-none fs-4 fw-bold link-info-2"
               style={{color : "#074256 !important"}}
             >
               Home
             </Link>
             <Link
               to="/browse"
-              className="nav-opt-item-link mx-3 text-decoration-none fs-4 fw-bold link-info"
+              className="nav-opt-item-link mx-3 text-decoration-none fs-4 fw-bold link-info-2"
               style={{color : "#074256 !important"}}
             >
               Browse
             </Link>
             <Link
               to="/courses"
-              className="nav-opt-item-link mx-3 text-decoration-none fs-4 fw-bold link-info"
+              className="nav-opt-item-link mx-3 text-decoration-none fs-4 fw-bold link-info-2"
               style={{color : "#074256 !important"}}
             >
               Courses
             </Link>
             <Link
               to="/profile"
-              className="nav-opt-item-link mx-3 text-decoration-none fs-4 fw-bold link-info"
+              className="nav-opt-item-link mx-3 text-decoration-none fs-4 fw-bold link-info-2"
               style={{color : "#074256 !important"}}
             >
               Profile

@@ -25,17 +25,28 @@ const AddEntry = () => {
         topic: [{value: tags}],
         creator : { user: JSON.parse(localStorage.getItem("user")) }
         };
-        console.log(newEntry);
-       const addres = await fetch("/api/createThread/" , {
+        if (newEntry.subject === "" ){
+            alert("Please enter the title.")
+            window.location.reload()
+        }
+        if (newEntry.content === "" ){
+            alert("Please enter some content.")
+            window.location.reload()
+        }
+        if (newEntry.topic === "" ){
+            alert("Please select a topic.")
+            window.location.reload()
+        }
+          
+       const addRes = await fetch("/api/createThread/" , {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(newEntry),
         });
-        const response = await addres.json();
+        const response = await addRes.json();
         console.log(response);
-        window.location.href = "/browse";
     };
        
     const  TAGS_OPT = [
@@ -54,16 +65,16 @@ const AddEntry = () => {
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <h5 className="mt-3" htmlFor="title">Title</h5>
-                    <input type="text" className="form-control" id="title" aria-describedby="titleHelp" placeholder="Enter title" value={title} onChange={handleTitleChange} />
+                    <input type="text" required className="form-control" id="title" aria-describedby="titleHelp" placeholder="Enter title" value={title} onChange={handleTitleChange} />
                     <small id="titleHelp" className="form-text text-muted">Enter a title for your entry.</small>
                 </div>
                 <div className="form-group">
                     <h5 className="mt-3" htmlFor="content">Add something helpful </h5>
-                    <textarea className="form-control" id="content" rows="3" value={content} onChange={handleContentChange}></textarea>
+                    <textarea className="form-control" id="content" rows="3" required value={content} onChange={handleContentChange}></textarea>
                 </div>
                 <div className="form-group">
                     <h5 className="mt-3" htmlFor="tags">Tag</h5>
-                    <select className="form-control" id="tags" value={tags} onChange={handleTagsChange}>
+                    <select className="form-control" id="tags" required value={tags} onChange={handleTagsChange}>
                         {TAGS_OPT.map((tag, index) => {
                             return (
                                 <option key={index} value={Object.keys(tag)[0]}>{Object.values(tag)[0]}</option>

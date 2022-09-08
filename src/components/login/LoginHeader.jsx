@@ -16,7 +16,7 @@ const LoginHeader = () => {
           <div className="nav-opt-item d-flex align-items-center">
             <Link
               to="/"
-              className="nav-opt-item-link mx-3 text-decoration-none fs-4 fw-bold link-info"
+              className="nav-opt-item-link mx-3 text-decoration-none fs-4 fw-bold link-info-2"
             >
               Home
             </Link>

@@ -20,7 +20,7 @@ import managementinnovation from "../components/pdf/managementinnovation.pdf";
 import marketingmanagement from "../components/pdf/marketingmanagement.pdf";
 import computerarchitecture from "../components/pdf/computerarchitecture.pdf";
 import datastructures from "../components/pdf/datastructures.pdf";
-import dbms from "../components/pdf/dbms.pdf";
+import databasemanagementsystem from "../components/pdf/databasemanagementsystem.pdf";
 import discretestructures from "../components/pdf/discretestructures.pdf";
 import java from "../components/pdf/java.pdf";
 import problemsolvingtechniques from "../components/pdf/problemsolvingtechniques.pdf";
@@ -51,7 +51,7 @@ const mapLinkTOName = {
   marketingmanagement,
   computerarchitecture,
   datastructures,
-  dbms,
+  databasemanagementsystem,
   discretestructures,
   java,
   problemsolvingtechniques,
