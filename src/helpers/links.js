@@ -11,7 +11,7 @@ import Syllabus from "../pages/Syllabus";
 import Courses from "../pages/Courses";
 import Fees from "../pages/Fees";
 import Subjects from "../pages/Subjects";
-import Entry from "../components/Entry";
+import Entry from "../pages/Entry";
 import Saved from "../pages/Saved";
 import NewEntry from "../pages/NewEntry";
 

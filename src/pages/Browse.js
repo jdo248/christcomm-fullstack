@@ -8,7 +8,7 @@ const Browse = () => {
     const getFeed = async () => {
       const res = await fetch(`/api/entries/?page=${pageIdx}`);
       setPageIdx(pageIdx + 1);
-      let pst = await res.json();
+      const pst = await res.json();
       setPosts(pst.results);
       if (pst.next === null) {
         setHasNextPage(false);
@@ -89,7 +89,7 @@ const Browse = () => {
             </button>
           ) : (
             <div style={{ marginTop: "1em" }}>
-              <h3>No more posts</h3>
+              <h3 className="text-dark text-opacity-25">No more posts</h3>
             </div>
           )}
         </div>

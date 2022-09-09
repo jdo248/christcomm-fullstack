@@ -14,6 +14,9 @@ const Profile = () => {
     document.title = `Your Profile`;
   }, []);
 
+  const getSaved = async () => {
+    window.location.href = `/saved`;
+  };
   return (
     <div className="py-3">
       <h1 className="text-center">Your Profile</h1>
@@ -48,6 +51,16 @@ const Profile = () => {
         <h1>
           <a href={`mailto:${user?.email}`}> {user?.email} </a>
         </h1>
+        <div>
+          <a
+            href="/saved"
+            onClick={getSaved}
+            className="mt-5 mb-1"
+            style={{ textDecoration: "none" }}
+          >
+            Get Saved
+          </a>
+        </div>
       </div>
       <div className="logout text-center mt-5">
         <button className="btn btn-primary" onClick={logout}>

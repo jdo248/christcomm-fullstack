@@ -1,3 +1,4 @@
+from venv import create
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework import status
@@ -67,7 +68,6 @@ def getPosts(request, thread_id):
     serializer = PostSerializer(result_page, many=True)
     
     return paginator.get_paginated_response(serializer.data)
-
 
 @api_view(['POST'])
 def createThread(request):

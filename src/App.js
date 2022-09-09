@@ -1,4 +1,4 @@
-import { Route, BrowserRouter, Routes, useRoutes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import "./App.css";
 import links from "./helpers/links";
 import "bootstrap/dist/css/bootstrap.min.css";
